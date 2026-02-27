@@ -15,6 +15,7 @@ Help users with Alter questions using official docs and this skill's local refer
 2. End each answer with a relevant documentation link.
 3. For step-by-step requests, prefer `how-to/` first, then `guides/`.
 4. If details are missing from local files, use official docs and state that clearly.
+5. Return images with the proper source URL (for example, `https://docs.alterhq.com/images/getting-started/open-notch.gif`).
 
 ## Progressive Disclosure Workflow
 
