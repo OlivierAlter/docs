@@ -123,6 +123,20 @@
       },
       {
         "tab": "API Router",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "references/api-router-overview"
+            ]
+          },
+          {
+            "group": "Reference",
+            "pages": [
+              "references/api-model-names"
+            ]
+          }
+        ],
         "openapi": "openapi.json"
       }
 

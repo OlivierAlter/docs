@@ -67,8 +67,8 @@ When using the Alter API, model names follow this format:
 ```
 
 ### Examples:
-- `OpenAI#gpt-4o` - Latest GPT-4O
-- `OpenAI#gpt-4o-mini` - Lightweight GPT
+- `OpenAI#gpt-5` - Latest GPT-5
+- `OpenAI#gpt-5-nano` - Lightweight GPT
 - `Claude#claude-sonnet-4-6` - Latest Claude
 - `Gemini#gemini-2.5-pro` - Latest Gemini
 - `Mistral#mistral-small-latest` - Mistral model
@@ -97,7 +97,7 @@ client = OpenAI(
 )
 
 response = client.chat.completions.create(
-    model="OpenAI#gpt-4o",
+    model="OpenAI#gpt-5",
     messages=[
         {"role": "user", "content": "What is machine learning?"}
     ]
@@ -118,7 +118,7 @@ const openai = new OpenAI({
 });
 
 const completion = await openai.chat.completions.create({
-    model: "OpenAI#gpt-4o",
+    model: "OpenAI#gpt-5",
     messages: [
         {"role": "user", "content": "Hello!"}
     ]
@@ -135,7 +135,7 @@ from langchain_openai import ChatOpenAI
 chat = ChatOpenAI(
     api_key="YOUR_API_KEY",
     base_url="https://alterhq.com/api/v1",
-    model="OpenAI#gpt-4o"
+    model="OpenAI#gpt-5"
 )
 
 response = chat.invoke("What is AI?")
@@ -149,7 +149,7 @@ curl https://alterhq.com/api/v1/chat/completions \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -d '{
-    "model": "OpenAI#gpt-4o",
+    "model": "OpenAI#gpt-5",
     "messages": [
       {"role": "user", "content": "What is machine learning?"}
     ]
@@ -160,29 +160,29 @@ curl https://alterhq.com/api/v1/chat/completions \
 
 ### For Speed
 - `Alter#light` - Lightweight model
-- `OpenAI#gpt-4o-mini` - Lightweight GPT
+- `OpenAI#gpt-5-nano` - Lightweight GPT
 - `Gemini#gemini-2.5-flash-lite` - Fast Gemini
 
 ### For Quality
 - `Alter#best` - Best available
-- `OpenAI#gpt-4o` - Most capable GPT
+- `OpenAI#gpt-5` - Most capable GPT
 - `Gemini#gemini-2.5-pro` - Powerful Gemini
 - `Claude#claude-sonnet-4-6` - Latest Claude
 
 ### For Vision/Images
-- `OpenAI#gpt-4o` - Advanced multimodal
+- `OpenAI#gpt-5` - Advanced multimodal
 - `Gemini#gemini-2.5-pro` - Strong vision
 - `Mistral#pixtral-large-latest` - Vision capable
 
 ### For Coding
-- `OpenAI#gpt-4o` - Excellent code
+- `OpenAI#gpt-5` - Excellent code
 - `Mistral#codestral-2501` - Code specialist
 - `Claude#claude-sonnet-4-6` - Strong coding
 
 ### For Cost
 - `Alter#fair` - Cost-effective
 - `Alter#light` - Cheapest
-- `OpenAI#gpt-4o-mini` - Budget GPT
+- `OpenAI#gpt-5-nano` - Budget GPT
 
 ### For Web Search
 - `Perplexity#sonar` - Web-aware
@@ -215,7 +215,7 @@ Standard OpenAI API parameters work with Alter:
 
 ### Model Comparison & A/B Testing
 ```python
-for model_id in ["OpenAI#gpt-4o", "Claude#claude-sonnet-4-6", "Gemini#gemini-2.5-pro"]:
+for model_id in ["OpenAI#gpt-5", "Claude#claude-sonnet-4-6", "Gemini#gemini-2.5-pro"]:
     # Run same prompt on different models
     # Compare outputs
 ```
@@ -258,7 +258,7 @@ If your application doesn't list available models:
 - Check network connectivity to `alterhq.com`
 
 ### High Latency
-- Try a faster model (e.g., `OpenAI#gpt-4o-mini`)
+- Try a faster model (e.g., `OpenAI#gpt-5-nano`)
 - Check your network connection
 - Use streaming for long responses
 

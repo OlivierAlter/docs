@@ -16,12 +16,12 @@ You're trying to connect another app to Alter's API, but:
 
 ## Why this happens
 
-Many AI apps expect OpenAI's simple model format (like `gpt-4o`), but Alter supports multiple providers. So we use a special format to identify which provider each model comes from.
+Many AI apps expect OpenAI's simple model format (like `gpt-5`), but Alter supports multiple providers. So we use a special format to identify which provider each model comes from.
 
 ## The solution
 
 <Card title="Model Format: Provider#Model-name" icon="hashtag">
-  Instead of just `gpt-4o`, use: `OpenAI#gpt-4o`
+  Instead of just `gpt-5`, use: `OpenAI#gpt-5`
   
   The format is always: **Provider name** + **#** + **Model name**
 </Card>
@@ -48,8 +48,8 @@ Many AI apps expect OpenAI's simple model format (like `gpt-4o`), but Alter supp
     
     | Provider | Model Name | Full ID |
     |----------|-----------|---------|
-    | OpenAI | GPT-4o | `OpenAI#gpt-4o` |
-    | OpenAI | GPT-4o Mini | `OpenAI#gpt-4o-mini` |
+    | OpenAI | GPT-5 | `OpenAI#gpt-5` |
+    | OpenAI | GPT-5 Nano | `OpenAI#gpt-5-nano` |
     | Claude | Sonnet 4 | `Claude#claude-sonnet-4-6` |
     | Gemini | 2.5 Pro | `Gemini#gemini-2.5-pro` |
     | Mistral | Large | `Mistral#mistral-large-latest` |
@@ -60,7 +60,7 @@ Many AI apps expect OpenAI's simple model format (like `gpt-4o`), but Alter supp
 ## Test the connection
 
 Try this simple test:
-1. Send a chat completion request with model `OpenAI#gpt-4o-mini`
+1. Send a chat completion request with model `OpenAI#gpt-5-nano`
 2. **Success:** You should get a response back through Alter
 
 If it works with one model, it will work with all of them – just change the model ID!

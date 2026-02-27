@@ -1,0 +1,87 @@
+---
+title: "API Router Overview"
+description: "Overview of the Alter API Router service and OpenAI-compatible endpoint"
+---
+
+The Alter API Router is an OpenAI-compatible API gateway that provides unified access to 92+ AI models from 10+ providers through a single endpoint.
+
+## What is the API Router?
+
+The API Router is a centralized service that eliminates the need to manage multiple API keys and billing accounts across different AI providers. Instead of maintaining separate accounts with OpenAI, Anthropic, Google, and others, you can use Alter as your single entry point for all AI model access.
+
+### Key Benefits
+
+- **Single API key** for all providers
+- **Centralized billing** through your Alter account
+- **92+ models** from 10+ providers
+- **OpenAI-compatible endpoint** works with existing tools and SDKs
+- **Easy model switching** without code changes
+
+## Quick Start
+
+### 1. Generate an API Key
+
+1. Open **Settings** (**⌘ ,**)
+2. Go to the **Router** tab
+3. Under "Alter API Keys", click **Add New Key**
+4. Copy your key (starts with `sk-`)
+
+### 2. Get the Endpoint
+
+```
+https://alterhq.com/api
+```
+
+For most tools, use:
+```
+https://alterhq.com/api/v1
+```
+
+### 3. List Available Models
+
+```bash
+curl https://alterhq.com/api/models \
+  -H "Authorization: Bearer YOUR_API_KEY"
+```
+
+## Model Naming Format
+
+Models use the format: `Provider#Model-name`
+
+Examples:
+- `OpenAI#gpt-5` - Latest GPT-5
+- `OpenAI#gpt-5-mini` - Lightweight GPT-5
+- `Claude#claude-sonnet-4-6` - Latest Claude
+- `Gemini#gemini-2.5-pro` - Latest Gemini
+
+## Usage Example
+
+```python
+from openai import OpenAI
+
+client = OpenAI(
+    api_key="YOUR_API_KEY",
+    base_url="https://alterhq.com/api/v1"
+)
+
+response = client.chat.completions.create(
+    model="OpenAI#gpt-5",
+    messages=[
+        {"role": "user", "content": "What is machine learning?"}
+    ]
+)
+
+print(response.choices[0].message.content)
+```
+
+## Usage Limits
+
+- **Daily Limit**: 200 requests per day under fair use
+- **Throttling**: After 200 requests, throttled to 1 per 10 minutes
+- **Budget Top-up**: Available for consistent access beyond fair use
+
+## Next Steps
+
+- [API Gateway Guide](/guides/api-gateway) - Complete usage documentation
+- [Model Naming Reference](/references/api-model-names) - Full model list
+- OpenAPI Reference - Interactive API documentation

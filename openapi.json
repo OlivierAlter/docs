@@ -5,6 +5,11 @@
     "version": "1.0.0",
     "description": "Public-facing OpenAI-compatible endpoints."
   },
+  "servers": [
+    {
+      "url": "https://alterhq.com/api"
+    }
+  ],
   "paths": {
     "/v1/models": {
       "get": {

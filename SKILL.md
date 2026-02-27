@@ -86,7 +86,7 @@ Use only the amount of context needed:
 
 ## More Help
 
-- Docs: https://alterhq.com/docs
+- Docs: https://docs.alterhq.com
 - Discord: https://discord.gg/gvCMmfBRWZ
 - YouTube: https://youtube.com/@useAlter
 - Email: hi@alterhq.com
