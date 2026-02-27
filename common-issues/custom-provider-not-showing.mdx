@@ -1,0 +1,94 @@
+---
+title: "Custom Models Not Showing"
+description: "Fix missing OpenAI, Mistral, or local models in the model selector"
+---
+
+<Note>
+  **Important:** You need an API key from your provider (OpenAI, Mistral, etc.) before they will appear in Alter.
+</Note>
+
+## What's happening?
+
+You've added your API key, but when you press `/` to see models:
+- The **Custom** section is empty
+- You don't see your provider's models
+- You only see Alter Cloud models
+
+## Common setup mistakes
+
+<AccordionGroup>
+  <Accordion icon="toggle-off" title="Custom Provider is turned off">
+    Even with an API key entered, you need to enable custom providers:
+    
+    1. Open Alter Settings (`Cmd + ,`)
+    2. Go to **API Keys** tab
+    3. Find **Custom Provider** section
+    4. Toggle **Enable Custom Provider** to ON
+    5. You should see a ✓ next to "Custom Endpoint"
+  </Accordion>
+  
+  <Accordion icon="link" title="Wrong endpoint format (especially for Azure)">
+    **For most providers:** Just paste your API key – the endpoint is automatic
+    
+    **For Azure specifically**, you need the full URL:
+    ```
+    https://your-instance.openai.azure.com/openai/deployments/your-model-name/chat/completions?api-version=2024-02-15-preview
+    ```
+    
+    Make sure your URL includes:
+    - Your instance name
+    - The deployment name
+    - The api-version parameter
+  </Accordion>
+  
+  <Accordion icon="key" title="Invalid or expired API key">
+    Quick checks:
+    - Did you copy the full key? (They usually start with `sk-`)
+    - Has the key expired?
+    - Do you have billing set up with the provider?
+    - Did you accidentally include extra spaces?
+    
+    Try generating a new key from your provider's dashboard.
+  </Accordion>
+</AccordionGroup>
+
+## Quick setup guide
+
+<Steps>
+  <Step title="Get your API key">
+    - **OpenAI:** https://platform.openai.com/api-keys
+    - **Mistral:** https://console.mistral.ai/api-keys/
+    - **Gemini:** https://aistudio.google.com/app/apikey
+  </Step>
+  
+  <Step title="Enter it in Alter">
+    1. Settings (`Cmd + ,`) → **API Keys**
+    2. Select your provider from the dropdown
+    3. Paste your key
+    4. Toggle **Enable Custom Provider** ON
+  </Step>
+  
+  <Step title="Check the model selector">
+    1. Press `/` in the Alter prompt box
+    2. Look for the **Custom** section
+    3. You should see your provider's models listed
+  </Step>
+</Steps>
+
+## Verify it's working
+
+After setup:
+1. Press `/` to open the model picker
+2. Look for the **Custom** category
+3. Select one of your custom models
+4. Send a test message
+5. **Success:** The model responds using your own API key!
+
+<Tip>
+  **Budget tip:** Using your own API key means you're billed directly by the provider. Monitor your usage on their dashboard to avoid surprises!
+</Tip>
+
+## Related help
+
+- [How to use your own API key](/how-to/use-byok)
+- [Choosing AI models](/guides/choosing-generative-model)

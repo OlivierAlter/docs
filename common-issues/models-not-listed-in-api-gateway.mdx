@@ -1,0 +1,81 @@
+---
+title: "API Gateway Won't List Models"
+description: "Fix empty model lists when connecting external apps to Alter's API"
+---
+
+<Note>
+  **Using the API Gateway?** This lets you use Alter's models in other apps like SillyTavern, NovelCrafter, or your own code.
+</Note>
+
+## What's happening?
+
+You're trying to connect another app to Alter's API, but:
+- The app connects but shows no available models
+- You have to manually type model names
+- Model requests fail unless you specify the exact name
+
+## Why this happens
+
+Many AI apps expect OpenAI's simple model format (like `gpt-4o`), but Alter supports multiple providers. So we use a special format to identify which provider each model comes from.
+
+## The solution
+
+<Card title="Model Format: Provider#Model-name" icon="hashtag">
+  Instead of just `gpt-4o`, use: `OpenAI#gpt-4o`
+  
+  The format is always: **Provider name** + **#** + **Model name**
+</Card>
+
+## Setup steps
+
+<Steps>
+  <Step title="Get your API credentials">
+    1. Open Alter → Settings (`Cmd + ,`)
+    2. Go to the **Router** tab
+    3. Click **Add New Key** to generate an API key
+    4. Copy the key (starts with `sk-...`)
+    5. Note the endpoint: `https://alterhq.com/api`
+  </Step>
+  
+  <Step title="Configure your external app">
+    In the app you're connecting:
+    - **Base URL:** `https://alterhq.com/api` (or try `https://alterhq.com/api/v1`)
+    - **API Key:** Your generated key from step 1
+  </Step>
+  
+  <Step title="Manually set the model">
+    Since automatic listing might not work, manually enter a model:
+    
+    | Provider | Model Name | Full ID |
+    |----------|-----------|---------|
+    | OpenAI | GPT-4o | `OpenAI#gpt-4o` |
+    | OpenAI | GPT-4o Mini | `OpenAI#gpt-4o-mini` |
+    | Claude | Sonnet 4 | `Claude#claude-sonnet-4-6` |
+    | Gemini | 2.5 Pro | `Gemini#gemini-2.5-pro` |
+    | Mistral | Large | `Mistral#mistral-large-latest` |
+    | Alter | Best Router | `Alter#best` |
+  </Step>
+</Steps>
+
+## Test the connection
+
+Try this simple test:
+1. Send a chat completion request with model `OpenAI#gpt-4o-mini`
+2. **Success:** You should get a response back through Alter
+
+If it works with one model, it will work with all of them – just change the model ID!
+
+<Tip>
+  **Pro tip:** The Alter API works exactly like OpenAI's API. If your app supports "OpenAI-compatible" endpoints, it will work with Alter.
+</Tip>
+
+## Still having issues?
+
+- Make sure you're using a valid Alter API key (not your provider's key)
+- Try both endpoints: `/api` and `/api/v1`
+- Some apps cache the model list – try restarting the app after setup
+
+## Related help
+
+- [API Gateway full guide](/guides/api-gateway)
+- [List of all available models](/guides/choosing-generative-model)

@@ -1,0 +1,90 @@
+---
+title: "Tools Not Working"
+description: "Fix integrations when Alter won't use your connected tools and apps"
+---
+
+<Note>
+  **Quick check:** Does your chosen AI model support tools? Some smaller models don't have tool-calling capabilities.
+</Note>
+
+## What's happening?
+
+You ask Alter to do something like "Send a message to John" or "Add a calendar event," but:
+- The AI responds with text instead of taking action
+- Nothing happens in the target app
+- You get "I don't have access to that" or similar responses
+
+## Why this happens
+
+<CardGroup cols={2}>
+  <Card title="Model Doesn't Support Tools" icon="brain">
+    Some AI models can't call tools – they only generate text
+  </Card>
+  <Card title="Tool Not Enabled" icon="toggle-off">
+    The tool is available but not turned on in Tools Manager
+  </Card>
+  <Card title="Wrong Prompt Format" icon="message">
+    The AI needs clear instructions about what tool to use and how
+  </Card>
+</CardGroup>
+
+## Step-by-step fix
+
+<Steps>
+  <Step title="Switch to a tool-capable model">
+    Not all models can use tools. Try one of these:
+    - **Alter Best** (our smart router)
+    - **Gemini 2.0 Flash**
+    - **Claude Sonnet**
+    - **GPT-4o**
+    
+    Press `/` in the prompt box to switch models.
+  </Step>
+  
+  <Step title="Enable the right tools">
+    1. Click the **three dots** in Alter → **Tools Manager**
+    2. Find the tool you want (Messages, Calendar, etc.)
+    3. Toggle it **on**
+    4. Check if it needs additional setup (like signing in)
+  </Step>
+  
+  <Step title="Be explicit in your request">
+    Instead of: *"Tell John I'm running late"*
+    
+    Try: *"Send a message to John Smith saying 'I'm running 10 minutes late' using the Messages tool"*
+    
+    The more specific you are, the better the AI understands.
+  </Step>
+  
+  <Step title="For Apple Shortcuts">
+    If using Apple Shortcuts:
+    1. Open the **Shortcuts** app
+    2. Edit your shortcut
+    3. Add "Receive input from" and set it to accept text
+    4. Save the shortcut
+    5. Try again in Alter
+  </Step>
+</Steps>
+
+## Test it
+
+Try this simple test:
+1. Make sure you're using a tool-capable model
+2. Enable the **System Notification** tool
+3. Say: "Send a system notification saying 'Test successful'"
+4. **Success:** You should see a macOS notification appear!
+
+<Tip>
+  **Start simple:** Test with basic tools like System Notification before trying complex integrations. This helps identify if it's a general tool issue or specific to one integration.
+</Tip>
+
+## Still not working?
+
+Some models are better at tools than others. If one model isn't working well with tools:
+1. Switch to **Alter Best** (it automatically picks capable models)
+2. Or try **Gemini 2.0 Flash** or **Claude Sonnet**
+
+## Related help
+
+- [Tool Manager Guide](/guides/tool-manager)
+- [Integrations overview](/guides/integrations)

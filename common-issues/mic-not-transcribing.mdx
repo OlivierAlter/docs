@@ -1,0 +1,79 @@
+---
+title: "Microphone Not Working"
+description: "Fix voice input and dictation issues when Alter doesn't transcribe your speech"
+---
+
+<Note>
+  **Quick check:** Is your Mac's microphone working in other apps like Voice Memos? If not, this is a system issue, not an Alter issue.
+</Note>
+
+## What's happening?
+
+You're holding the microphone button or pressing your voice hotkey, but:
+- Nothing happens when you speak
+- The dictation starts but no text appears
+- The recording indicator shows but stays blank
+
+## Common causes
+
+<CardGroup cols={2}>
+  <Card title="Missing Permissions" icon="shield">
+    Alter doesn't have permission to access your microphone
+  </Card>
+  <Card title="Wrong Voice Processor" icon="microphone">
+    Local voice models aren't downloaded or configured
+  </Card>
+  <Card title="Language Mismatch" icon="language">
+    Automatic language detection isn't working for your accent
+  </Card>
+</CardGroup>
+
+## How to fix it
+
+<Steps>
+  <Step title="Check Microphone Permissions">
+    1. Open **System Settings** on your Mac
+    2. Go to **Privacy & Security** → **Microphone**
+    3. Make sure **Alter** is enabled in the list
+    4. If it's already on, try toggling it off and back on
+  </Step>
+  
+  <Step title="Verify Voice Processor Settings">
+    1. In Alter, open **Settings** (`Cmd + ,`)
+    2. Go to the **Dictation** tab
+    3. Check that **Voice Processor** is set to:
+       - **Cloud** (for best accuracy)
+       - **Local (Apple)** (for privacy)
+       - Or download a Whisper model if you want offline processing
+  </Step>
+  
+  <Step title="Set Language Explicitly">
+    If automatic detection isn't working:
+    1. In **Settings** → **Dictation**
+    2. Change **Dictation Language** from "Automatic" to your specific language
+    3. Try dictating again
+  </Step>
+  
+  <Step title="Test Both Modes">
+    Try both ways of voice input:
+    - **Hold to speak**: Hold `Fn` (or your voice hotkey), speak, then release
+    - **Click to dictate**: Click the mic icon once to start, click again to finish
+  </Step>
+</Steps>
+
+## Did it work?
+
+Try this quick test:
+1. Hold your voice hotkey (default is `Fn`)
+2. Say "Hello, this is a test"
+3. Release the key
+4. **Success:** You should see "Hello, this is a test" appear in the prompt box
+
+<Tip>
+  **Still having issues?** Try restarting Alter after granting permissions. Sometimes macOS needs a fresh start to recognize new permissions.
+</Tip>
+
+## Related help
+
+- [Dictation settings](/guides/settings#dictation)
+- [How to change voice hotkey](/how-to/change-hotkey)

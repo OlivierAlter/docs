@@ -1,84 +1,149 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mint Starter Kit",
+  "theme": "almond",
+  "name": "Alter Documentation",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#e600ff",
+    "light": "#e600ff",
+    "dark": "#e600ff"
   },
   "favicon": "/favicon.svg",
+  "playground": "interactive",
   "navigation": {
     "tabs": [
+      {
+        "tab": "Getting Started",
+        "pages": [
+          "index",
+          "quickstart",
+          "guides/getting-started",
+          "guides/core-features",
+          "guides/alter-window"
+        ]
+      },
       {
         "tab": "Guides",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Features",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
+              "guides/dictation",
+              "guides/meetings"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Settings & Configuration",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "guides/alter-settings",
+              "guides/manage-settings",
+              "guides/settings"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "AI Models",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              "guides/choosing-generative-model",
+              "guides/api-gateway"
             ]
           },
           {
-            "group": "AI tools",
+            "group": "Integrations & Tools",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "guides/integrations",
+              "guides/tool-manager",
+              "guides/url-callbacks",
+              "guides/workspaces-actions"
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "How-To",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "Quick Tasks",
             "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "how-to/open-alter",
+              "how-to/add-context",
+              "how-to/change-hotkey",
+              "how-to/choose-language",
+              "how-to/use-byok",
+              "how-to/settings"
             ]
           }
         ]
+      },
+      {
+        "tab": "Use Cases",
+        "groups": [
+          {
+            "group": "Scenarios",
+            "pages": [
+              "use-cases/meeting-workflow",
+              "use-cases/local-model-privacy"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Troubleshooting",
+        "groups": [
+          {
+            "group": "Common Issues",
+            "pages": [
+              "common-issues/mic-not-transcribing",
+              "common-issues/hotkey-not-working",
+              "common-issues/tool-not-working",
+              "common-issues/custom-provider-not-showing",
+              "common-issues/models-not-listed-in-api-gateway"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Reference",
+        "groups": [
+          {
+            "group": "Quick Reference",
+            "pages": [
+              "references/faq-core",
+              "references/general-faq",
+              "references/pricing-faq",
+              "references/shortcuts",
+              "references/docs-map"
+            ]
+          },
+          {
+            "group": "Assets",
+            "pages": [
+              "references/image-library"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Router",
+        "openapi": "openapi.json"
       }
+
+
     ],
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "Website",
+          "href": "https://alterhq.com",
+          "icon": "globe"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Discord",
+          "href": "https://discord.gg/gvCMmfBRWZ",
+          "icon": "discord"
+        },
+        {
+          "anchor": "YouTube",
+          "href": "https://youtube.com/@useAlter",
+          "icon": "youtube"
         }
       ]
     }
@@ -91,32 +156,34 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:hi@alterhq.com"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Download",
+      "href": "https://alterhq.com/beta"
     }
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "youtube": "https://youtube.com/@useAlter",
+      "discord": "https://discord.gg/gvCMmfBRWZ",
+      "x": "https://x.com/@alterhq_",
+      "github": "https://github.com/alterhq",
+      "linkedin": "https://linkedin.com/company/alterhq"
     }
   }
 }

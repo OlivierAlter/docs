@@ -1,0 +1,160 @@
+---
+title: "Get Your Team Up to Speed with Alter"
+description: "How to onboard new team members with shared workspaces and consistent AI workflows"
+---
+
+<Info>
+  **Perfect for:** Team leads, managers, and organizations where multiple people need to use Alter consistently.
+</Info>
+
+## The Challenge
+
+You have a great Alter setup:
+- Custom Actions for your team's workflows
+- Carefully configured settings
+- Shared workspaces with important files
+- Specific models that work best for your tasks
+
+But every time someone new joins, they have to figure it all out from scratch. They:
+- Use the wrong models
+- Don't know about your custom Actions
+- Recreate work you've already done
+- Make inconsistent outputs
+
+## The Solution: Share Your Setup
+
+Alter makes it easy to share configurations so new team members can be productive on day one.
+
+## Step-by-step team onboarding
+
+<Steps>
+  <Step title="Create a baseline configuration">
+    Document your team's standard settings:
+    - **Recommended model** (e.g., "Use Claude for code review, Gemini for creative tasks")
+    - **Default temperature** (e.g., 0.7 for balanced creativity)
+    - **Voice hotkey** (standardize on `Fn` or a custom key)
+    - **File naming conventions** for workspaces
+  </Step>
+  
+  <Step title="Build starter workspaces">
+    Create shared workspaces with common context:
+    - **Codebase workspace:** Include your main project folders
+    - **Documentation workspace:** Include specs, requirements, style guides
+    - **Knowledge base workspace:** Include past decisions, FAQs, wikis
+    
+    <Tip>
+      Workspaces are stored in `~/Library/Application Support/Alter/Workspaces/`. You can share the `.alterworkspace` files directly or document how to create them.
+    </Tip>
+  </Step>
+  
+  <Step title="Share custom Actions">
+    Export your team's most useful Actions:
+    1. Open **Action Editor** (from the menu bar)
+    2. Select an Action
+    3. Click **Export** (or press `Cmd + E`)
+    4. Save the `.json` file
+    5. Share it with your team
+    
+    New members can import these with `Cmd + O` in the Action Editor.
+  </Step>
+  
+  <Step title="Create a team profile template">
+    Share a Profile description template new members can paste into Settings > Profile:
+    
+    ```
+    Role: [Job title]
+    Team: [Team name]
+    Communication style: [Direct/casual/formal]
+    
+    Common tools we use:
+    - GitHub repo: [URL]
+    - Project management: [Linear/Asana/Jira]
+    - Documentation: [Notion/Confluence]
+    
+    Technical context:
+    - Primary language: [Python/JavaScript/etc]
+    - Framework: [React/Django/etc]
+    - Key dependencies: [List main libraries]
+    ```
+  </Step>
+</Steps>
+
+## Example: How a dev team uses this
+
+**The Setup:**
+- **Standard model:** Claude Sonnet for most tasks
+- **Code review Action:** Pre-configured to check for security issues, tests, and documentation
+- **Shared workspace:** Main codebase + API documentation + deployment guides
+- **Team profile:** Everyone includes the GitHub repo structure and key dependencies
+
+**The Result:**
+When a new developer joins:
+1. They install Alter
+2. Import the team's Actions (5 minutes)
+3. Clone the shared workspace (2 minutes)  
+4. Paste the profile template (1 minute)
+5. They're immediately productive – they can ask "How does the auth system work?" and get contextual answers
+
+## Making it stick
+
+<AccordionGroup>
+  <Accordion icon="refresh" title="Weekly refinement sessions">
+    Spend 15 minutes each week reviewing:
+    - Which Actions are people using?
+    - What prompts work best?
+    - What's confusing new members?
+    
+    Update your shared resources based on feedback.
+  </Accordion>
+  
+  <Accordion icon="users" title="Create a team chat channel">
+    Have a dedicated channel (Slack/Discord) for:
+    - Sharing useful prompts
+    - Posting new Actions
+    - Asking "How do I...?" questions
+    - Celebrating wins ("Alter just saved me 2 hours!")
+  </Accordion>
+  
+  <Accordion icon="book" title="Maintain a team playbook">
+    Document your Alter setup in your team wiki:
+    - Link to exported Actions
+    - Instructions for setting up workspaces
+    - Best practices for your domain
+    - Common mistakes to avoid
+  </Accordion>
+</AccordionGroup>
+
+## Quick wins for different teams
+
+<CardGroup cols={2}>
+  <Card title="Engineering Teams" icon="code">
+    - Code review Actions
+    - Debug helper with your tech stack
+    - Documentation generator
+  </Card>
+  <Card title="Marketing Teams" icon="megaphone">
+    - Brand voice checker
+    - Campaign brief analyzer
+    - Content calendar helper
+  </Card>
+  <Card title="Support Teams" icon="headset">
+    - Ticket response templates
+    - Knowledge base searcher
+    - Escalation predictor
+  </Card>
+  <Card title="Product Teams" icon="box">
+    - User feedback analyzer
+    - Requirements clarifier
+    - Release note generator
+  </Card>
+</CardGroup>
+
+## Related resources
+
+- [Workspaces guide](/guides/workspaces-actions) – How to create and manage workspaces
+- [Action Editor guide](/guides/alter-settings) – Creating and sharing custom Actions
+- [Choosing the right model](/guides/choosing-generative-model) – Model recommendations by use case
+
+---
+
+**Start small:** Pick one Action or workspace to share this week. See how your team responds, then build from there!

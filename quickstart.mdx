@@ -1,80 +1,88 @@
 ---
 title: "Quickstart"
-description: "Start building awesome documentation in minutes"
+description: "Get started with Alter in three simple steps"
 ---
 
 ## Get started in three steps
 
-Get your documentation site running locally and make your first customization.
+Start using Alter to boost your productivity with AI assistance.
 
-### Step 1: Set up your local environment
+### Step 1: Download and Install
 
 <AccordionGroup>
-  <Accordion icon="copy" title="Clone your docs locally">
-    During the onboarding process, you created a GitHub repository with your docs content if you didn't already have one. You can find a link to this repository in your [dashboard](https://dashboard.mintlify.com).
+  <Accordion icon="download" title="Download Alter">
+    Download Alter from our [website](https://alterhq.com/beta) or the Mac App Store.
     
-    To clone the repository locally so that you can make and preview changes to your docs, follow the [Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) guide in the GitHub docs.
+    System requirements:
+    - macOS 15.0 or later
+    - Apple Silicon or Intel Mac
   </Accordion>
-  <Accordion icon="rectangle-terminal" title="Start the preview server">
-    1. Install the Mintlify CLI: `npm i -g mint`
-    2. Navigate to your docs directory and run: `mint dev`
-    3. Open `http://localhost:3000` to see your docs live!
+  <Accordion icon="gear" title="Complete Setup">
+    1. Open the downloaded DMG and drag Alter to your Applications folder
+    2. Launch Alter from Applications
+    3. Grant required permissions when prompted (Accessibility, Microphone, Screen Recording)
     
-    <Tip>Your preview updates automatically as you edit files.</Tip>
+    <Tip>Alter needs these permissions to provide full functionality like reading selected text and capturing context.</Tip>
   </Accordion>
 </AccordionGroup>
 
-### Step 2: Deploy your changes
+### Step 2: Initial Configuration
 
 <AccordionGroup>
-  <Accordion icon="github" title="Install our GitHub app">
-    Install the Mintlify GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app).
+  <Accordion icon="user" title="Set up your profile">
+    Open **Settings** (⌘,) and go to the **Profile** tab:
     
-    Our GitHub app automatically deploys your changes to your docs site, so you don't need to manage deployments yourself.
-</Accordion>
-<Accordion icon="palette" title="Update your site name and colors">
-    For a first change, let's update the name and colors of your docs site.
-
-    1. Open `docs.json` in your editor.
-    2. Change the `"name"` field to your project name.
-    3. Update the `"colors"` to match your brand.
-    4. Save and see your changes instantly at `http://localhost:3000`.
-
-    <Tip>Try changing the primary color to see an immediate difference!</Tip>
+    - Tell Alter about yourself and your role
+    - Share what you're working on
+    - Set your preferred communication style
+    - Add any technical references or explainers for tools you use
+    
+    This helps Alter provide more relevant and personalized responses.
+  </Accordion>
+  <Accordion icon="keyboard" title="Configure your hotkeys">
+    In **Settings > Defaults**:
+    
+    - Set your **Quick Menu** shortcut (default: Alt+Space)
+    - Enable the **Selection Button** for quick access when selecting text
+    - Adjust other preferences as needed
   </Accordion>
 </AccordionGroup>
 
-### Step 3: Go live
+### Step 3: Start Using Alter
 
-<Accordion icon="rocket" title="Publish your docs">
-  1. Commit and push your changes.
-  2. Your docs will update and be live in moments!
+<Accordion icon="rocket" title="Try your first interaction">
+  1. **Open Alter**: Hover over your Mac's notch or press your Quick Menu shortcut
+  2. **Type a prompt**: Ask a question or give a command
+  3. **Add context**: Drag files or use `@` to add context
+  4. **Use voice**: Hold the mic icon or press your dictation key to speak
+  
+  <Tip>Press `/` in the prompt box to see available AI models and select your favorite!</Tip>
 </Accordion>
 
 ## Next steps
 
-Now that you have your docs running, explore these key features:
+Now that you're set up, explore these key features:
 
 <CardGroup cols={2}>
 
-<Card title="Write Content" icon="pen-to-square" href="/essentials/markdown">
-  Learn MDX syntax and start writing your documentation.
+<Card title="Core Features" icon="sparkles" href="/guides/core-features">
+  Discover AppSense, Follow Mode, actions, and workspaces.
 </Card>
 
-<Card title="Customize style" icon="palette" href="/essentials/settings">
-  Make your docs match your brand perfectly.
+<Card title="Voice Commands" icon="microphone" href="/guides/dictation">
+  Master speech-to-text and voice automation.
 </Card>
 
-<Card title="Add code examples" icon="square-code" href="/essentials/code">
-  Include syntax-highlighted code blocks.
+<Card title="Choose Your Model" icon="brain" href="/guides/choosing-generative-model">
+  Select the best AI model for your needs.
 </Card>
 
-<Card title="API documentation" icon="code" href="/api-reference/introduction">
-  Auto-generate API docs from OpenAPI specs.
+<Card title="The Hub" icon="window-maximize" href="/guides/alter-window">
+  Learn about the main Alter workspace interface.
 </Card>
 
 </CardGroup>
 
 <Note>
-  **Need help?** See our [full documentation](https://mintlify.com/docs) or join our [community](https://mintlify.com/community).
+  **Need help?** Check our [FAQ](/references/faq-core), join our [Discord](https://discord.gg/gvCMmfBRWZ), or email [hi@alterhq.com](mailto:hi@alterhq.com).
 </Note>
